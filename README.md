@@ -1,4 +1,4 @@
-##Project Description
+## Project Description
 
 A music streaming startup, Sparkify, has grown their user base and song database even more and want to move their data warehouse to a data lake. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
@@ -6,7 +6,7 @@ As their data engineer, you are tasked with building an ETL pipeline that extrac
 
 You'll be able to test your database and ETL pipeline by running queries given to you by the analytics team from Sparkify and compare your results with their expected results.
 
-#First Steps
+# First Steps
 
 The first thing that we will need to do is setup our access and secret access AWS key in the file;
 
@@ -18,7 +18,7 @@ os.environ['AWS_ACCESS_KEY_ID'] =  config['AWS']['AWS_ACCESS_KEY_ID']
 os.environ['AWS_SECRET_ACCESS_KEY'] = config['AWS']['AWS_SECRET_ACCESS_KEY']
 
 
-#Creating a spark session
+# Creating a spark session
 
 
 The next thing we will need to do is create our spark session, we do so;
@@ -34,7 +34,7 @@ def create_spark_session():
     return spark
 
 
-#Functions
+# Functions
 
 The next thing we need to do is define functions for both reading and writing the data from the s3 udacity bucket. Importantly we also want to define the structure that these records will be inserteed to. This project calls for star schema. We create the structure for the song data;
 
